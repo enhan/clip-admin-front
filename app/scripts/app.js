@@ -8,8 +8,23 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('clipAdminFrontApp', [
     'ngCookies',
-    'ngTouch'
+    'ngTouch',
+    'restangular',
+    'ui.router'
   ]);
+
+
+app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
+
+  $urlRouterProvider.otherwise("/");
+
+  $stateProvider.state("index", {
+    url: "/",
+    templateUrl: "views/states/home.html",
+    controller: 'IndexCtrl'
+  });
+
+});

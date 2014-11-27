@@ -7,11 +7,11 @@
  * # MainCtrl
  * Controller of the clipAdminFrontApp
  */
-angular.module('clipAdminFrontApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+
+var app = angular.module('clipAdminFrontApp');
+
+
+app.controller('IndexCtrl', function ($scope) {
+
+  }
+);
