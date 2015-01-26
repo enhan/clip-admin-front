@@ -19,12 +19,19 @@ var app = angular
 
 app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
 
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/login");
 
-  $stateProvider.state("index", {
-    url: "/",
+    //RestangularProvider.setBaseUrl("http://clip.cleverapps.io/");
+    RestangularProvider.setBaseUrl("http://localhost:9000/");
+
+  $stateProvider.state("login", {
+    url: "/login",
+    templateUrl: "views/states/login.html",
+    controller: "IndexCtrl"
+  }).state("home", {
+    url: "/home",
     templateUrl: "views/states/home.html",
-    controller: 'IndexCtrl'
+    controller: "IndexCtrl"
   });
 
 });
