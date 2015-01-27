@@ -13,7 +13,8 @@ var app = angular
     'ngCookies',
     'ngTouch',
     'restangular',
-    'ui.router'
+    'ui.router',
+    'ui.bootstrap'
   ]);
 
 
